@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  postgres_db:
+    container_name: postgres_container
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_NAME: example
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: example
+    ports:
+      - 5433:5432

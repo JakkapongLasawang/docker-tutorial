@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  app_1_prod:
+    command: npm run prod
+    image: app_1_prod_image
+    container_name: app_1_prod_container
+    build:
+      context: ./app_1
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000

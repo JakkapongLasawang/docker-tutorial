@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  app_1_dev:
+    command: npm run dev
+    image: app_1_dev_image
+    container_name: app_1_dev_container
+    build:
+      context: ./app_1
+      dockerfile: Dockerfile
+    volumes:
+      - './app_1:/usr/app'
+      - '/usr/app/node_modules'
+    ports:
+      - 4000:3000
